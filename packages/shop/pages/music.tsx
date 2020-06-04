@@ -21,7 +21,7 @@ import OFFERS from 'data/offers';
 import BannerImg from 'image/grocery.png';
 import storeType from 'constants/storeType';
 
-const PAGE_TYPE = 'grocery';
+const PAGE_TYPE = 'music';
 
 function HomePage({ deviceType }) {
   const { query } = useRouter();

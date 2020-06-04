@@ -180,7 +180,7 @@ const Cart: React.FC<CartPropsType> = ({
       </Scrollbars>
 
       <CheckoutButtonWrapper>
-        <PromoCode>
+        {/* <PromoCode>
           {!coupon.discountInPercent ? (
             <>
               {!displayCoupon ? (
@@ -216,7 +216,7 @@ const Cart: React.FC<CartPropsType> = ({
               <span>{coupon.code}</span>
             </CouponCode>
           )}
-        </PromoCode>
+        </PromoCode> */}
 
         {products.length !== 0 ? (
           <Link href='/checkout'>

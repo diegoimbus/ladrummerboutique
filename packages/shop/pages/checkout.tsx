@@ -23,11 +23,11 @@ const CheckoutPage: NextPage<Props> = ({ deviceType }) => {
   }
   if (error) return <div>{error.message}</div>;
   const token = true;
-
+  console.log(data)
   return (
     <>
       <Head>
-        <title>Checkout - PickBazar</title>
+        <title>Checkout - La Drummer Boutique</title>
       </Head>
       <ProfileProvider initData={data.me}>
         <Modal>

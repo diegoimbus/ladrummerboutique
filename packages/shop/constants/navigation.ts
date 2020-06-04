@@ -1,5 +1,5 @@
 export const HOME_PAGE = '/';
-export const GROCERY_PAGE = '/grocery';
+export const GROCERY_PAGE = '/music';
 export const MAKEUP_PAGE = '/makeup';
 export const CLOTHING = '/clothing';
 export const BAGS_PAGE = '/bags';

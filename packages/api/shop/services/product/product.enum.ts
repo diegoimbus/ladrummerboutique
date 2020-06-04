@@ -3,7 +3,7 @@ import { registerEnumType } from 'type-graphql';
 export enum ProductType {
   BOOK = 'book',
   BAGS = 'bags',
-  GROCERY = 'grocery',
+  GROCERY = 'music',
   MEDICINE = 'medicine',
   FOOD = 'food',
   CLOTH = 'cloth',

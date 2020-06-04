@@ -27,6 +27,16 @@ const accor = [
     intlTitleId: 'faqNo4Title',
     intlDetailsId: 'faqNo4Desc',
   },
+  {
+    id: 5,
+    intlTitleId: 'faqNo5Title',
+    intlDetailsId: 'faqNo5Desc',
+  },
+  {
+    id: 6,
+    intlTitleId: 'faqNo6Title',
+    intlDetailsId: 'faqNo6Desc',
+  },
 ];
 
 const Heading = styled.h3`
@@ -74,11 +84,11 @@ export default function() {
   return (
     <Modal>
       <Head>
-        <title>PickBazar</title>
+        <title>Ladrummerboutique</title>
       </Head>
       <HelpPageWrapper>
         <HelpPageContainer>
-          <Heading>F.A.Q</Heading>
+          <Heading>Preguntas frecuentes</Heading>
           <Accordion items={accor} />
         </HelpPageContainer>
 

@@ -88,12 +88,13 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
   const [applyedCoupon] = useMutation(APPLY_COUPON);
 
   const handleSubmit = async () => {
-    setLoading(true);
-    if (isValid) {
-      clearCart();
-      Router.push('/order-received');
-    }
-    setLoading(false);
+    // setLoading(true);
+    // if (isValid) {
+    //   clearCart();
+    //   Router.push('/order-received');
+    // }
+    // setLoading(false);
+
   };
 
   useEffect(() => {
@@ -107,7 +108,6 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
       items.length > 0 &&
       address.length &&
       contact.length &&
-      card.length &&
       schedules.length
     ) {
       setIsValid(true);
@@ -183,7 +183,7 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
   };
 
   return (
-    <form>
+    <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
       <CheckcoutWrapper>
         <CheckoutContainer>
           <OrderSummary>
@@ -382,36 +382,20 @@ const Checkout: React.FC<MyFormProps & any> = ({ token, deviceType }) => {
               />
             </ButtonGroup>
           </Contact>
-          {/* PaymentOption */}
-          <PaymentOption>
-            <Heading>
-              <FormattedMessage
-                id="selectPaymentText"
-                defaultMessage="Select Payment Option"
-              />
-            </Heading>
-            <PaymentGroup
-              name="payment"
-              deviceType={deviceType}
-              items={card}
-              onEditDeleteField={(item: any, type: string) =>
-                handleEditDelete(item, type, 'payment')
-              }
-              onChange={(item: any) =>
-                dispatch({
-                  type: 'SET_PRIMARY_CARD',
-                  payload: item.id.toString(),
-                })
-              }
-              handleAddNewCard={() => {
-                handleModal(
-                  StripePaymentForm,
-                  { totalPrice },
-                  'add-address-modal stripe-modal'
-                );
-              }}
-            />
-          </PaymentOption>
+          <input name="merchantId"    type="hidden"  value="508029"   />
+          <input name="accountId"     type="hidden"  value="512326" />
+          <input name="description"   type="hidden"  value="Test PAYU"  />
+          <input name="referenceCode" type="hidden"  value="TestPayU" />
+          <input name="amount"        type="hidden"  value="20000"   />
+          <input name="tax"           type="hidden"  value="0"  />
+          <input name="taxReturnBase" type="hidden"  value="0" />
+          <input name="currency"      type="hidden"  value="COP" />
+          <input name="signature"     type="hidden"  value="7ee7cf808ce6a39b17481c54f2c57acc"  />
+          <input name="test"          type="hidden"  value="1" />
+          <input name="buyerEmail"    type="hidden"  value="test@test.com" />
+          <input name="responseUrl"    type="hidden"  value="http://www.test.com/response" />
+          <input name="confirmationUrl"    type="hidden"  value="http://www.test.com/confirmation" />
+          <input name="Submit"        type="submit"  value="Enviar" />
           {/* CheckoutSubmit */}
           <CheckoutSubmit>
             <Button

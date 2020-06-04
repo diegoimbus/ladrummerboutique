@@ -267,7 +267,7 @@ const Header: React.FC<HeaderProps> = ({
             </a>
           </Link>
         </Logo>
-        <MainMenu>
+        {/* <MainMenu>
           <Popover
             className="right"
             handler={
@@ -283,7 +283,7 @@ const Header: React.FC<HeaderProps> = ({
             }
             content={<>{MenuArray.map(NavItem)}</>}
           />
-        </MainMenu>
+        </MainMenu> */}
       </HeaderLeftSide>
       {isHomePage ? (
         <SearchBox
@@ -313,7 +313,7 @@ const Header: React.FC<HeaderProps> = ({
           iconClass="menu-icon"
           icon={<HelpIcon />}
         />
-        <LangSwithcer>
+        {/* <LangSwithcer>
           <Popover
             className="right"
             handler={
@@ -329,9 +329,9 @@ const Header: React.FC<HeaderProps> = ({
             }
             content={<>{LanguageArray.map(LanguageMenu)}</>}
           />
-        </LangSwithcer>
+        </LangSwithcer> */}
 
-        {!isAuthenticated ? (
+        {/* {!isAuthenticated ? (
           <Button
             onClick={signInOutForm}
             size="small"
@@ -368,7 +368,7 @@ const Header: React.FC<HeaderProps> = ({
               </>
             }
           />
-        )}
+        )} */}
       </HeaderRightSide>
     </HeaderWrapper>
   );

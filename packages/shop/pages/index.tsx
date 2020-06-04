@@ -5,7 +5,7 @@ import { useRouter } from 'next/dist/client/router';
 const Index: React.FC = () => {
   const router = useRouter();
   React.useEffect(() => {
-    router.replace('/grocery');
+    router.replace('/music');
   });
   return (
     <Head>
@@ -15,3 +15,4 @@ const Index: React.FC = () => {
 };
 
 export default Index;
+

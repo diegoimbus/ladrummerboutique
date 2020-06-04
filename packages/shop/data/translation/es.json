@@ -27,7 +27,7 @@
   "navlinkAccountSettings": "La configuración de su cuenta",
   "cartItems": "artículos",
   "cartItem": "articulo",
-  "addCartButton": "Carro",
+  "addCartButton": "Añadir",
   "addToCartButton": "Añadir al carrito",
   "backBtn": "atrás",
   "noProductFound": "No se encontraron productos.",
@@ -102,17 +102,24 @@
   "saleText": "Rebaja",
   "offText": "Apagada",
 
-  "faqNo1Title": "¿Cómo contactar con el Servicio al Cliente?",
-  "faqNo1Desc": "Nuestro equipo de experiencia del cliente está disponible los 7 días de la semana y ofrecemos 2 formas de ponerse en contacto: correo electrónico y chat. Intentamos responder rápidamente, por lo que no debe esperar demasiado para recibir una respuesta.",
+  "faqNo1Title": "¿Tienen envíos a todo el país?",
+  "faqNo1Desc": "Sí, contamos con envíos a todo el país a través de nuestros aliados Interrapidísimo, FedEx y Servientrega.",
 
-  "faqNo2Title": "La instalación de la aplicación falló, ¿cómo actualizar la información del sistema?",
-  "faqNo2Desc": "Por favor lea la documentación cuidadosamente. También tenemos algunos videos tutoriales en línea sobre este tema. Si el problema persiste, abra un ticket en el foro de soporte",
+  "faqNo2Title": "¿Qué medios de pago reciben?",
+  "faqNo2Desc": "Recibimos los siguientes medios de pago:\nTarjeta de crédito, transferencia bancaria, consignación a través de corresponsal bancario, Rappipay y Daviplata.",
 
-  "faqNo3Title": "Respuesta del sitio web tomando tiempo, ¿cómo mejorar?",
-  "faqNo3Desc": "Al principio, verifique su conexión a internet. También tenemos algunos videos tutoriales en línea sobre este tema. Si el problema persiste, abra un ticket en el foro de soporte.",
+  "faqNo3Title": "¿Patrocinan artistas?",
+  "faqNo3Desc": "¡Claro que sí! Sólo envíanos tu presskit a info@ladrummerboutique.com y junto con las marcas estudiaremos tu caso y te daremos respuesta en un plazo de 2 semanas.",
 
-  "faqNo4Title": "¿Cómo creo una cuenta?",
-  "faqNo4Desc": "Si desea abrir una cuenta para uso personal, puede hacerlo por teléfono o en línea. Abrir una cuenta en línea solo debería tomar unos minutos.",
+  "faqNo4Title": "¿Qué productos manejan?",
+  "faqNo4Desc": "En nuestra página principal puedes encontrar todas las categorías de productos que manejamos (/music)",
+  
+  "faqNo5Title": "¿Dónde están ubicados?",
+  "faqNo5Desc": "Estamos ubicados en la ciudad de Bogotá, Colombia. Y contamos con tres showrooms en los siguientes sectores:\n- Palermo\n- Ciudad Salitre\n- Modelia\nEscríbenos al chat para agendar tu visita.",
+
+  "faqNo6Title": "¿Sólo ofrecen productos para bateristas?",
+  "faqNo6Desc": "No, en nuestra página principal puedes encontrar todas las categorías de productos que manejamos (/music)",
+
   "totalText": "Total",
   "subTotal": "Subtotal",
   "intlOrderDetailsDiscount": "Descuento",

@@ -32,7 +32,7 @@ const LanguageProvider = ({ children, messages }) => {
 
   return (
     <LanguageContext.Provider value={{ state, toggleLanguage, dispatch }}>
-      <IntlProvider locale={state.lang} messages={messages[state.lang]}>
+      <IntlProvider locale="es" messages={messages['es']}>
         <InjectRTL
           lang={state.lang}
           dir={state.lang === 'ar' || state.lang === 'he' ? 'rtl' : 'ltr'}

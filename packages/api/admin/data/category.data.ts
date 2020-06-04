@@ -30,7 +30,7 @@ const loadCategories = (): Category[] => {
 
     {
       id: 9,
-      name: 'Meat & Fish',
+      name: 'Platillos',
       slug: 'meat-and-fish',
       products: [],
       type: 'grocery',
