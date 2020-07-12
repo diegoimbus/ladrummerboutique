@@ -184,7 +184,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = props => {
             <Logo>
               <Link href={HOME_PAGE}>
                 <a>
-                  <img src={Logoimage} alt='pickbazar-admin' />
+                  <img  />
                 </a>
               </Link>
             </Logo>
