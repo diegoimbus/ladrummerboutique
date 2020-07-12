@@ -26,23 +26,14 @@ const main = async () => {
   });  
   app.use(cors());
   const apolloServer = new ApolloServer({
+    cors: true,
     schema,
     introspection: true,
     playground: true,
     tracing: true,
   });
-  exports.graphqlHandler = server.createHandler({
-    cors: {
-      origin: '*',
-      methods: 'POST',
-      allowedHeaders: [
-        'Content-Type',
-        'Origin',
-        'Accept'
-      ]
-    },
-  });
-  apolloServer.applyMiddleware({ app, path });
+
+  apolloServer.applyMiddleware({ app, path, cors: true });
 
   app.listen(PORT, () => {
     console.log(`🚀 started http://localhost:${PORT}${path}`);

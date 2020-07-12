@@ -14,25 +14,16 @@ const main = async () => {
   });
 
   const apolloServer = new ApolloServer({
+    cors: true,
     schema,
     introspection: true,
     playground: true,
     tracing: true,
     // cacheControl: true,
   });
-  exports.graphqlHandler = server.createHandler({
-    cors: {
-      origin: '*',
-      methods: 'POST',
-      allowedHeaders: [
-        'Content-Type',
-        'Origin',
-        'Accept'
-      ]
-    },
-  });
+
   app.use(cors());
-  apolloServer.applyMiddleware({ app, path });
+  apolloServer.applyMiddleware({ app, path, cors: true });
 
   app.listen(PORT, () => {
     console.log('🚀 started http://localhost:4000/graphql');
