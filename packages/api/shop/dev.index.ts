@@ -5,6 +5,7 @@ import { buildSchema } from 'type-graphql';
 
 const app: express.Application = express();
 const path = '/graphql';
+const cors = require('cors'); 
 const PORT = process.env.PORT || 4000;
 
 const main = async () => {
@@ -19,7 +20,18 @@ const main = async () => {
     tracing: true,
     // cacheControl: true,
   });
-
+  exports.graphqlHandler = server.createHandler({
+    cors: {
+      origin: '*',
+      methods: 'POST',
+      allowedHeaders: [
+        'Content-Type',
+        'Origin',
+        'Accept'
+      ]
+    },
+  });
+  app.use(cors());
   apolloServer.applyMiddleware({ app, path });
 
   app.listen(PORT, () => {

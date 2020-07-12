@@ -10,7 +10,9 @@ import { CouponResolver } from './shop/services/coupon/coupon.resolver';
 import { CategoryResolver } from './shop/services/category/category.resolver';
 const app: express.Application = express();
 const path = '/shop/graphql';
+const cors = require('cors'); 
 const PORT = process.env.PORT || 4000;
+
 const main = async () => {
   const schema = await buildSchema({
     resolvers: [
@@ -21,12 +23,24 @@ const main = async () => {
       CouponResolver,
       CategoryResolver,
     ],
-  });
+  });  
+  app.use(cors());
   const apolloServer = new ApolloServer({
     schema,
     introspection: true,
     playground: true,
     tracing: true,
+  });
+  exports.graphqlHandler = server.createHandler({
+    cors: {
+      origin: '*',
+      methods: 'POST',
+      allowedHeaders: [
+        'Content-Type',
+        'Origin',
+        'Accept'
+      ]
+    },
   });
   apolloServer.applyMiddleware({ app, path });
 
