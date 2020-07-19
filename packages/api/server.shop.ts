@@ -26,7 +26,6 @@ const main = async () => {
   });  
   app.use(cors());
   const apolloServer = new ApolloServer({
-    cors: true,
     schema,
     introspection: true,
     playground: true,
